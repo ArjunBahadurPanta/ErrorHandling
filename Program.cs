@@ -13,9 +13,18 @@ try
 
 }
 
-catch(Exception ex)
+catch(FormatException ex)
 {
     Console.WriteLine(ex.Message);
-    Console.WriteLine(ex.StackTrace);
+    //Console.WriteLine(ex.StackTrace);
+}
 
+catch(DivideByZeroException ex)
+{
+    Console.WriteLine(ex.Message);
+}
+
+finally
+{
+    Console.WriteLine("Finally block executed.");
 }
